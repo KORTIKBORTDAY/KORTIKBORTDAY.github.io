@@ -1,0 +1,102 @@
+To align the three buttons so they are equally spaced horizontally, you can adjust the CSS for the container holding the buttons. You can use flexbox to achieve this. Here's the modified code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ok Bro.</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .button-container {
+            display: flex; /* Use flexbox */
+            justify-content: space-between; /* Distribute space between items */
+            margin: 20px 0; /* Add margin for spacing */
+        }
+
+        button {
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: 5px solid #e420d152; /* Solid border */
+            border-radius: 3rem; /* Rounded corners */
+            color: #ffffff;
+            background-color: transparent; /* Transparent background */
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        /* Hover effect */
+        button:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        #container {
+            display: flex; /* Use flexbox */
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+        }
+
+        #quarter {
+            flex: 1 1 25%; /* Flex-grow, flex-shrink, and flex-basis */
+            background-color: black;
+            margin: 1px; /* Add some margin between the divs */
+            box-sizing: border-box; /* Include padding and border in the width */
+        }
+
+        #quarter img {
+            width: 100%; /* Make sure the images fill their parent divs */
+            display: block; /* Remove any inline spacing issues */
+        }
+
+        /* Hide the audio element */
+        #hidden-audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="quarter">
+            <img src="1e0d166a-bf8c-48ab-9935-a72a05bcbbb7.jpeg" alt="Image 1">
+        </div>
+        <div id="quarter">
+            <img src="9549e247-988c-4f73-a39b-a8d178600422.jpeg" alt="Image 2">
+        </div>
+        <div id="quarter">
+            <img src="dff05469-d2a2-4d8c-9689-d7e7b966dbc5.jpeg" alt="Image 3">
+        </div>
+    </div>
+    <div class="button-container">
+        <button onclick="button1()">ONE</button>
+        <button onclick="button2()">TWO</button>
+        <button onclick="button3()">THREE</button>
+    </div>
+    
+    <div id="container">
+        <div id="quarter">
+            <img src="69076151-a98b-40b8-91c3-41a53e85f3df.jpeg" alt="Image 4">
+        </div>
+    </div>
+
+    <script>
+        const button1 = () => {
+            window.location.href = "https://youtu.be/yBLdQ1a4-JI?si=2_E6EP0l-kTddv-8"
+        };
+
+        const button2 = () => {
+            window.location.href = "https://youtube.com/clip/UgkxjGudooCs9oEuGXMd-tw82GELu3EYG-7E?si=8RnjSDUrrvTSHU0e"
+        };
+
+        const button3 = () => {
+            window.location.href = "https://youtu.be/dQw4w9WgXcQ?si=CrG2GAoq0Nqd89TV"
+        };
+    </script>
+</body>
+</html>
